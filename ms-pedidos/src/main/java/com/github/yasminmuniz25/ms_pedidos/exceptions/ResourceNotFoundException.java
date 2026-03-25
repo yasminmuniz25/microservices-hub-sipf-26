@@ -1,0 +1,8 @@
+package com.github.yasminmuniz25.ms_pedidos.exceptions;
+
+public class ResourceNotFoundException extends RuntimeException{
+
+    public ResourceNotFoundException(String message) {
+        super(message);
+    }
+}
