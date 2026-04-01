@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.github.yasminmuniz25.ms.pagamentos.MsPagamentosApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.081 s -- in com.github.yasminmuniz25.ms.pagamentos.MsPagamentosApplicationTests
