@@ -180,6 +180,7 @@ public class PagamentoControllerIT {
                 .andExpect(status().isNoContent());
     }
 
+    //delete
     @Test
     void deletePagamentoShouldReturn404WhenIdDoesNotExist() throws Exception{
         mockMvc.perform(delete("/pagamentos/{id}", nonExistingId))
