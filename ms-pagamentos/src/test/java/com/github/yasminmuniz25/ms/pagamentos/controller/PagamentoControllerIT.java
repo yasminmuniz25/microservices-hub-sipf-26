@@ -159,4 +159,25 @@ public class PagamentoControllerIT {
                 .andExpect(jsonPath("$.errors").isArray());
     }
 
+    @Test
+    void updatePagamentoShouldReturn404WhenIdDoesNotExist() throws Exception{
+        pagamento = Factory.createPagamento();
+        PagamentoDTO requestDTO = new PagamentoDTO(pagamento);
+        String jsonRequestBody = objectMapper.writeValueAsString(requestDTO);
+
+        mockMvc.perform(put("/pagamentos/{id}", nonExistingId)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .content(jsonRequestBody))
+                .andDo(print())
+                .andExpect(status().isNotFound());
+    }
+
+    @Test
+    void deletePagamentoShouldReturn204WhenIdExists() throws Exception {
+        mockMvc.perform(delete("/pagamentos/{id}", existingId))
+                .andDo(print())
+                .andExpect(status().isNoContent());
+    }
+
 }
