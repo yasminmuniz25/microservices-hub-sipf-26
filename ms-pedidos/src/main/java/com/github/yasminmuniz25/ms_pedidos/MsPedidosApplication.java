@@ -2,9 +2,11 @@ package com.github.yasminmuniz25.ms_pedidos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-public class  MsPedidosApplication {
+@EnableDiscoveryClient
+public class MsPedidosApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MsPedidosApplication.class, args);
